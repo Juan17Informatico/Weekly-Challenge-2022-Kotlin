@@ -17,13 +17,13 @@ const calcularBisiesto = (year) => {
     const proximosBisiestos = [];
 
     for (let i = 1; i <= 30; i++) {
-        
-        if (esBisiesto(year + 4)) {
-            proximosBisiestos.push(year + 4);
-            year += 4;
-        } else if (esBisiesto(year + 8)) {
-            proximosBisiestos.push(year + 8);
-            year += 8;
+
+        year += 4;
+
+        if (esBisiesto(year)) {
+            proximosBisiestos.push(year);
+        } else {
+            i--;
         }
         
     }
